@@ -1,0 +1,157 @@
+/* Styles for small screens (smartphone) */
+@media (max-width: 767px) {
+  .container {
+    display: flex; /* Using flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 20px; /* Add space around content */
+    border-radius: 10px; /* Rounded corners for container */
+  }
+
+  nav ul {
+    display: flex; /* Using flexbox for navigation */
+    flex-wrap: wrap; /* Wraping items in navigation */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  nav li {
+    margin: 0.5rem; /* Add spacing between navigation items */
+  }
+}
+
+/* Styles for larger screens (desktop/laptop) */
+@media (min-width: 768px) {
+  .container {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: 1fr 3fr; /* Two columns */
+    grid-gap: 2rem; /* Gap between grid items */
+    background-color: #ffffff; /* White background */
+    padding: 30px; /* Add space around content */
+    border-radius: 20px; /* Larger rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+}
+  header .container {
+    display: flex; /* Use flexbox for header */
+    flex-direction: column; 
+    align-items: center; 
+  nav ul {
+    display: flex; /* Use flexbox for navigation */
+    flex-direction: column; 
+  }
+
+  nav li {
+    margin-bottom: 0.5rem; /* Adding space below navigation items */
+  }
+}
+
+/* Web fonts */
+@font-face {
+  font-family: 'Roboto'; 
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Font source */
+  font-weight: normal; 
+  font-style: normal; 
+body {
+  font-family: 'Roboto', sans-serif; /* Using Roboto font for body */
+  font-size: var(--font-size-text); 
+  background-color: #e6f7ff; /* Light bluish background */
+}
+
+/* Typography styles for headings and paragraphs */
+h1, h2, h3, h4 {
+  font-family: 'Baloo 2', sans-serif; 
+  font-weight: var(--font-weight-strong); 
+  line-height: 1.2; /* Line height for readability */
+  margin-bottom: 0.5em; /* Bottom margin for spacing */
+}
+}
+/* Individual heading styles */
+h1 {
+  font-size: var(--font-size-h1); /* Custom font size for h1 */
+}
+
+h2 {
+  font-size: var(--font-size-h2); /* Custom font size for h2 */
+}
+
+h3 {
+  font-size: var(--font-size-h3); /* Custom font size for h3 */
+}
+
+h4 {
+  font-size: var(--font-size-h4); /* Custom font size for h4 */
+}
+
+/* Paragraph styles */
+p {
+  line-height: 1.6; 
+}
+
+/* Color variables for consistency */
+:root {
+  --color-primary: #007bff; /* Primary color */
+  --color-secondary: #6c757d; /* Secondary color */
+  --color-background: #f8f9fa; /* Background color */
+  --color-text: #333; /* Text color */
+  --color-anchor: #007bff; /* Anchor/link color */
+}
+
+/* Body and link styles */
+body {
+  color: var(--color-text); 
+}
+
+a {
+  color: var(--color-anchor); /* Use anchor color variable */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for links */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header styles */
+header {
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-secondary)); /* Gradient background */
+  color: var(--color-light); /* Light color for text */
+  padding: 2rem 0; 
+}
+
+/* Blockquote styles */
+blockquote {
+  position: relative; /* Relative positioning */
+  padding: 2rem; 
+  background-color: var(--color-light); /* Light background color */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  border-radius: var(--border-radius); /* Border radius for rounded edges */
+}
+
+/* Quotation mark before blockquote */
+blockquote::before {
+  content: '"'; /* Quotation mark content */
+  position: absolute; 
+  top: -1rem; 
+  left: 1rem; 
+  font-size: 4rem; 
+  color: var(--color-primary); /* Primary color for quotation mark */
+}
+
+/* GitHub link styles */
+.link-github {
+  display: inline-flex; 
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect for GitHub link */
+.link-github:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* GitHub icon styles */
+.link-github svg {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  margin-right: 0.5rem; 
+}
